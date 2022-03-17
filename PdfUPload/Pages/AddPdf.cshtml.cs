@@ -47,30 +47,18 @@ namespace PdfUPload.Pages
             {
                 if (File.Length > 0 && File.Length < 300000)
                 {
-                    
-
-                    // var filePath = @"c\:PdfFolder";
-                    using (var target = new MemoryStream())
+                   using (var target = new MemoryStream())
                     {
-                       File.CopyTo(target);
-                       PdfStore.Attachment = target.ToArray();
+                        File.CopyTo(target);
+                        PdfStore.Attachment = target.ToArray();
 
-                    }
-                    
-                    
-                    
-                    //  string fileName = Path.GetFileName(file.FileName);
-                    // PdfStore.Attachment = target.ToArray();
-                    // PdfStore.Attachment = fileName;     
-
-                }
+                    }  
+             }
                 await _pdfTable.InsertOneAsync(PdfStore);
 
             }
             
             return RedirectToPage("./Index");
-        }
-
-      
+        } 
     }
 }

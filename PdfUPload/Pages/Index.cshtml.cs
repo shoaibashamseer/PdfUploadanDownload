@@ -33,22 +33,7 @@ namespace PdfUpload.Pages
             PdfStore = _pdfTable.Find(FilterDefinition<PdfStore>.Empty).ToList();
 
         }
-        /*  public async Task<IActionResult> OnShowAsync()
-          {
-
-              string fileName = Path.GetFileName(File.FileName);
-              FileStream file = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read)
-              {
-                    byte[] b = new byte[1024];
-                    UTF8Encoding data = new UTF8Encoding(true);
-                    while (file.Read(b, 0, b.Length) > 0)
-              {
-                  MessageBox.Show(data.GetString(b));
-              }
-
-          };
-
-          }*/
+       
         public async Task<IActionResult> OnPostDownloadAsync(int? id)
         {
             var myPdf = _pdfTable.Find(x => x.Id == id).FirstOrDefault();
@@ -78,25 +63,7 @@ namespace PdfUpload.Pages
         {
             await _pdfTable.DeleteOneAsync(x => x.Id == id);
             return RedirectToPage("./Index");
-            /* var pdfs = _pdfTable.Find(FilterDefinition<PdfStore>.Empty).ToList();
-             var myPdf = pdfs.FirstOrDefault(x => x.Id == id);
-             if (myPdf == null)
-             {
-                 return NotFound();
-             }
-             if (myPdf.Attachment == null)
-             {
-                 return Page();
-             }
-             else
-             {
-                 myPdf = null;
-                 var filter = Builders<PdfStore>.Filter.In(x => x.Id, PdfStore.Select(x => x.Id));
-                 await _pdfTable.ReplaceOneAsync(x => x.Id == id, myPdf);
-             }
-             PdfStore = _pdfTable.Find(FilterDefinition<PdfStore>.Empty).ToList();
-             return Page();
-         }*/
+    
         }
     }
 }

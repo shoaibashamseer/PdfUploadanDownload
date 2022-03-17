@@ -4,9 +4,9 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<h1>Pdf Lists</h1>
+<h1 class="text_center" style="color:#F08080">PDF LIBRARY</h1>
 <p>
-    <a asp-page="AddPdf">Add</a>
+    <a asp-page="AddPdf" class="btn btn-success">Add New</a>
 </p>
 <table class="table">
     <thead>
@@ -16,9 +16,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.PdfStore[0].Description)
-            </th>
-            <th>
-                Upload
             </th>
              <th>Download</th>
             <th>Delete Attachment</th>
@@ -35,13 +32,10 @@
                     @Html.DisplayFor(ModelItem => item.Description)
                 </td>
                 <td>
-                   <a href=ShowPdf > @Html.DisplayFor(ModelItem => item.Name)</a>
-                </td>
-                <td>
                      @if(item.Attachment != null)
                     {
                         <form asp-page-handler="Download" method="post" asp-route-id="@item.Id">
-                            <input type="submit" class="btn btn-Success" value="View">
+                            <input type="submit" class="btn btn-primary" value="View">
                         </form>
                     }
                    </td>

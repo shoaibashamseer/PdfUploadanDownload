@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Privacy.cshtml.cs" />
+    <Compile Remove="Pages\ShowPdf.cshtml.cs" />
     <Compile Remove="Pages\UploadPdf.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Privacy.cshtml" />
+    <Content Remove="Pages\ShowPdf.cshtml" />
     <Content Remove="Pages\UploadPdf.cshtml" />
   </ItemGroup>
 

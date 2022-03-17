@@ -14,7 +14,6 @@ C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\PdfUPload.R
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\AddPdf.cshtml.g.cs
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
@@ -54,4 +53,3 @@ C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\PdfUPload.V
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\PdfUPload.csproj.CopyComplete
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\PdfUPload.genruntimeconfig.cache
 C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\ref\PdfUPload.dll
-C:\Users\Shamseer\Desktop\shobi\PdfUPload\PdfUPload\obj\Debug\net5.0\Razor\Pages\ShowPdf.cshtml.g.cs
