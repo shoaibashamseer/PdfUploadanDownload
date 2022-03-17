@@ -1,0 +1,59 @@
+﻿@page
+@using PdfUpload.Pages
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<h1>Pdf Lists</h1>
+<p>
+    <a asp-page="AddPdf">Add</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PdfStore[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PdfStore[0].Description)
+            </th>
+            <th>
+                Upload
+            </th>
+             <th>Download</th>
+            <th>Delete Attachment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PdfStore)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.Name)
+                </td>
+                  <td>
+                    @Html.DisplayFor(ModelItem => item.Description)
+                </td>
+                <td>
+                   <a href=ShowPdf > @Html.DisplayFor(ModelItem => item.Name)</a>
+                </td>
+                <td>
+                     @if(item.Attachment != null)
+                    {
+                        <form asp-page-handler="Download" method="post" asp-route-id="@item.Id">
+                            <input type="submit" class="btn btn-Success" value="View">
+                        </form>
+                    }
+                   </td>
+                <td>
+                    @if(item.Attachment != null)
+                    {
+                        <form asp-page-handler="Delete" method="post" asp-route-id="@item.Id">
+                            <input type="submit" class="btn btn-secondary" value="Delete">
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+﻿@page
+@model PdfUPload.Pages.AddPdfModel
+@{
+     ViewData["Title"] = "Add Pdf";
+}
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PdfStore.Name" class="control-label"></label>
+                    <input asp-for="PdfStore.Name" class="form-control" />
+                    <span asp-validation-for="PdfStore.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PdfStore.Description" class="control-label"></label>
+                    <input asp-for="PdfStore.Description" class="form-control" />
+                    <span asp-validation-for="PdfStore.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                <div class="col-md-10">
+                    <p>Upload a File</p>
+                    <input type="hidden" asp-for="@Model.ID" value="@Model.myID"/>
+                    <input asp-for="File" class="form-control" accept=".pdf" type="file"/>
+                </div>
+            </div>
+                <div class="form-group">
+                    <input type="submit" vlaue="AddPdf" class="btn btn-secondary"/>
+                </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index"> View List</a>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
